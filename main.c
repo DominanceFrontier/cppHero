@@ -1,6 +1,3 @@
-#include <iostream>
-#include <cstdlib>
-
 #include "SDL.h"
 
 int main()
@@ -19,7 +16,8 @@ int main()
     SDL_Window * window = SDL_CreateWindow("cppHero!", 0, 0, 640, 480, SDL_WINDOW_RESIZABLE);
     SDL_Renderer * renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_TARGETTEXTURE);
     SDL_Event event;
-    std::cout << "Game Initialized!" << std::endl;
+    printf("Game Initialized!\n");
+    fflush(stdout);
     
     while (1)
     {
@@ -27,7 +25,7 @@ int main()
         
         if (event.type == SDL_QUIT)
         {
-            std::cout << "Quitting." << std::endl;
+            printf("Quitting.\n");
             break;
         }
     }
